@@ -27,4 +27,4 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->delete('questions/{id}', ['uses' => 'QuestionController@delete']);
   
     $router->put('questions/{id}', ['uses' => 'QuestionController@update']);
-  });
+});
