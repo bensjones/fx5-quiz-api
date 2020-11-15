@@ -13,3 +13,7 @@ This uses Lumen and MySQL for a backend. So you'll want to make sure MySQL is in
 1. Run `php artisan db:seed` to populate the table with 5 questions.
 1. Run `php -S localhost:8001 -t public` to start the server locally.
 1. Curl (or us Postman) call a GET request to `http://localhost:8001/api/questions/`
+
+## Testing
+
+To run the basic tests, go to the project root directory and run `./vendor/bin/phpunit`.
