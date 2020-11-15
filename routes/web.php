@@ -16,3 +16,15 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->get('questions',  ['uses' => 'QuestionController@showAllQuestions']);
+  
+    $router->get('questions/{id}', ['uses' => 'QuestionController@showOneQuestion']);
+  
+    $router->post('questions', ['uses' => 'QuestionController@create']);
+  
+    $router->delete('questions/{id}', ['uses' => 'QuestionController@delete']);
+  
+    $router->put('questions/{id}', ['uses' => 'QuestionController@update']);
+  });
